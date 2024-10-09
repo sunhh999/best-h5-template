@@ -1,0 +1,23 @@
+{
+	"printWidth": 160,
+	"tabWidth": 2,
+	"useTabs": true,
+	"endOfLine": "lf",
+	"bracketSpacing": true,
+	"singleQuote": false,
+	"arrowParens": "avoid",
+	"trailingComma": "none",
+	"htmlWhitespaceSensitivity": "strict",
+	"singleAttributePerLine": true,
+	"plugins": ["@trivago/prettier-plugin-sort-imports"],
+	"overrides": [
+		{
+			"files": "*.html",
+			"options": {
+				"parser": "html"
+			}
+		}
+	],
+	"importOrderSeparation": true,
+	"importOrder": ["<THIRD_PARTY_MODULES>", "^@(.*)$", "^/@(.*)$", "^../", "^./"]
+}
