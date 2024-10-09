@@ -2,13 +2,16 @@
 import { VantResolver } from "unplugin-vue-components/resolvers";
 import Components from "unplugin-vue-components/vite";
 import type { Plugin, PluginOption } from "vite";
+import { createHtmlPlugin } from "vite-plugin-html";
 import PagesPlugin from "vite-plugin-pages";
 import vueSetupExtend from "vite-plugin-vue-setup-extend";
 
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
-export function createVitePlugins(viteEnvs: ViteEnv) {
+export function createVitePlugins(viteEnv: ViteEnv) {
+	const { VITE_ENABLE_ERUDA } = viteEnv;
+
 	const vitePiugins: (Plugin | Plugin[] | PluginOption[])[] = [
 		vue(),
 
@@ -27,7 +30,16 @@ export function createVitePlugins(viteEnvs: ViteEnv) {
 			resolvers: [VantResolver()]
 		}),
 		// 允许 setup 语法糖上添加组件名属性
-		vueSetupExtend()
+		vueSetupExtend(),
+
+		// 注入模板数据
+		createHtmlPlugin({
+			inject: {
+				data: {
+					ENABLE_ERUDA: VITE_ENABLE_ERUDA
+				}
+			}
+		})
 	];
 
 	return vitePiugins;

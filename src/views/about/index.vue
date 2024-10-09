@@ -1,3 +1,13 @@
+<route>
+  {
+    name:'new-about',
+    meta: {
+      requiresAuth: false,
+      layout:'top'
+    }
+  }
+ </route>
+
 <template>
 	<div>测试文件</div>
 </template>
