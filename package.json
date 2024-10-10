@@ -45,9 +45,10 @@
 		"vue-tsc": "^2.1.6"
 	},
 	"lint-staged": {
-		"*.{ts,tsx}": [
-			"echo 'begin to lint staged ts or tsx file'",
-			"eslint --fix"
+		"src/**/*.{js,vue}": [
+			"eslint --fix",
+			"prettier --write",
+			"git add"
 		]
 	},
 	"engines": {
