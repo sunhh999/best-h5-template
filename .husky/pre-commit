@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 使用pnpm运行script中的lint-staged脚本
+pnpm lint-staged
+
+# 使用 pnpm运行 lint:prettier
+pnpm lint:prettier
