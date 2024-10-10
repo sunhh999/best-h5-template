@@ -1,9 +1,11 @@
-import { createRouter, createWebHashHistory, type RouteLocationNormalized } from "vue-router";
-
 // import { useCachedViewStoreHook } from "@/store/modules/cachedView";
 // import NProgress from "@/utils/progress";
 // import setPageTitle from "@/utils/set-page-title";
-import routes from "./routes";
+// 这里就是vite-plugin-pages生成的路由信息，正常使用即可
+import routes from "virtual:generated-pages";
+import { createRouter, createWebHashHistory, type RouteLocationNormalized } from "vue-router";
+
+// import routes from "./routes";
 
 const router = createRouter({
 	history: createWebHashHistory(),

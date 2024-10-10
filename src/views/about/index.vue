@@ -1,9 +1,7 @@
 <route>
   {
-    name:'new-about',
     meta: {
       requiresAuth: false,
-      layout:'top'
     }
   }
  </route>
@@ -14,4 +12,4 @@
 
 <script setup lang="ts" name="about"></script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>

@@ -27,11 +27,11 @@ import { LayoutNavBar, LayoutTabbar } from "@/components";
 	</div>
 </template>
 
-<style lang="less" scoped>
-@import "@/styles/mixin.less";
+<style lang="scss" scoped>
+@import "@/styles/mixin.scss";
 
 .app-wrapper {
-	.clearfix();
+	// .clearfix();
 	position: relative;
 	height: 100%;
 	width: 100%;

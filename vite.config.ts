@@ -1,11 +1,12 @@
 import type { ConfigEnv, UserConfig } from "vite";
-import { loadEnv } from "vite";
+import { loadEnv, defineConfig } from "vite";
 
 import { createVitePlugins, createEsbuildConfig, createProxy } from "./build/index";
 import { wrapperEnv, pathResolve } from "./build/utils";
 
 // https://vitejs.dev/config/
-export default ({ command, mode }: ConfigEnv): UserConfig => {
+
+export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
 	const root = process.cwd();
 	const env = loadEnv(mode, root);
 
@@ -49,4 +50,4 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
 			}
 		}
 	};
-};
+});
