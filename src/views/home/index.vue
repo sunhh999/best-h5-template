@@ -1,9 +1,4 @@
 <script setup lang="ts"></script>
 <template>
-	<div>首页</div>
+	<div>首页123987192873912738912</div>
 </template>
-<route>
-{
-  redirect:'/'
-}
-</route>
